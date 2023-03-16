@@ -31,7 +31,7 @@ const Todo = () => {
     const todoStatusChange = (index: number) => {
         const updatedList = todos.map((todo, i) => {
             if (i === index) {
-                todo.status == "completed" ? todo.status = "incomplete" : todo.status = "completed"
+                todo.status === "completed" ? todo.status = "incomplete" : todo.status = "completed"
             }
             return todo
         })
@@ -108,7 +108,7 @@ const Todo = () => {
                                                     placeholder="Enter Your Task..." />
                                                 :
                                                 <label
-                                                    className={`inline-block ml-2 ${todo.status == "completed" ? "line-through" : ""} break-all hover:cursor-pointer`}
+                                                    className={`inline-block ml-2 ${todo.status === "completed" ? "line-through" : ""} break-all hover:cursor-pointer`}
                                                     htmlFor="radioDefault01"
                                                     onClick={() => todoStatusChange(index)}
                                                 >
